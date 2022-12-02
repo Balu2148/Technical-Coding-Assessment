@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRM Assignemnt</title>
+</head>
+
+<body>
+
+    <body>
+        <div>
+            <h3>Input:-</h3>
+            <p id="input_t_c"></p>
+            <p id="input_t_c_a"></p>
+            <p id="input_m_c"></p>
+        </div>
+        <div>
+            <h3>Output:-</h3>
+            <p id="output"></p>
+        </div>
+    </body>
+
+    <script>
+        let total_class = 250;
+        let total_class_attended = prompt(
+            "Total No of Class Attended by the Student:-",
+            150
+        );
+        let medical_condition = prompt("Medical Cause or Not ( 'Y' or 'N')", "N");
+
+        if (medical_condition !== "y") {
+            if ((output = total_class_attended / total_class) > 0.75) {
+                document.getElementById("output").innerHTML = true;
+            } else {
+                document.getElementById("output").innerHTML = false;
+            }
+        } else {
+            if ((output = total_class_attended / total_class) > 0.6) {
+                document.getElementById("output").innerHTML = true;
+            } else {
+                document.getElementById("output").innerHTML = false;
+            }
+        }
+        document.getElementById("input_t_c").innerHTML = total_class;
+        document.getElementById("input_t_c_a").innerHTML = total_class_attended;
+        document.getElementById("input_m_c").innerHTML = medical_condition.toUpperCase();
+    </script>
+
+</html>
